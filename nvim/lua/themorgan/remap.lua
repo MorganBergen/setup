@@ -9,6 +9,12 @@ vim.opt.mouse = "a"
 vim.opt.wrap = true
 vim.opt.linebreak = true
 
+vim.api.nvim_create_user_command("Format", function()
+	vim.cmd("!stylua %")
+end, {})
+
+--  :TSBufEnable highlight
+--  :TSBufEnable playground
 
 --  in order to make tabs smaller you need to adjust the following
 --
@@ -16,4 +22,3 @@ vim.opt.linebreak = true
 --  shiftwidth		number of spaces per indentation level
 --  softtabstop		number of spaces a tab counts for for in insert mode
 --  expandtab			converts tabs into spaces (idk what this means)
-

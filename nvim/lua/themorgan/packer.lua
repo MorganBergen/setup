@@ -1,57 +1,52 @@
-vim.cmd [[packadd packer.nvim]]
+return require("packer").startup(function(use)
+	use({ "wbthomason/packer.nvim" })
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
-return require('packer').startup(function(use)
+	use("nvim-treesitter/playground")
 
-		use { 'wbthomason/packer.nvim' }
+	use("theprimeagen/harpoon")
 
-		use { 'nvim-telescope/telescope.nvim', 
+	use("mbbill/undotree")
 
-				tag = '0.1.8',
+	use("tpope/vim-fugitive")
 
-				requires = { { 'nvim-lua/plenary.nvim' } }
+	-- use { 'folke/tokyonight.nvim',
+	-- lazy = false,
+	-- priority = 1000,
+	-- config = function()
+	-- require('after.plugin.tokyonight')
+	-- end
+	-- }
 
-		}
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			require("after.plugin.catppuccin")
+		end,
+	})
+	use({
+		"VonHeikemen/lsp-zero.nvim",
 
-		use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
+		branch = "v3.x",
 
-		use ( 'nvim-treesitter/playground' )
-		
-		use ( 'theprimeagen/harpoon' )
+		requires = {
+			{ "williamboman/mason.nvim" },
 
-		use ( 'mbbill/undotree' )
+			{ "williamboman/mason-lspconfig.nvim" },
 
-		use ( 'tpope/vim-fugitive' )
+			{ "neovim/nvim-lspconfig" },
 
-		use { 'folke/tokyonight.nvim',
+			{ "hrsh7th/nvim-cmp" },
 
-				lazy = false,
+			{ "hrsh7th/cmp-nvim-lsp" },
 
-				priority = 1000,
-
-				config = function()
-						
-						require('after.plugin.tokyonight')
-
-				end
-
-		}
-
-		use { 'VonHeikemen/lsp-zero.nvim',
-				
-				branch = 'v3.x',
-				
-				requires = { { 'williamboman/mason.nvim'},
-								
-								{'williamboman/mason-lspconfig.nvim'},
-
-								{'neovim/nvim-lspconfig'},
-								
-								{'hrsh7th/nvim-cmp'},
-								
-								{'hrsh7th/cmp-nvim-lsp'},
-								
-								{'L3MON4D3/LuaSnip'},
-				}
-		}
-
+			{ "L3MON4D3/LuaSnip" },
+		},
+	})
 end)
