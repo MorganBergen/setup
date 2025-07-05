@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Packer output
+nvim/plugin/packer_compiled.lua
