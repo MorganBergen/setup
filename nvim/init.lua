@@ -1,5 +1,5 @@
 require("themorgan")
 
-require("themorgan.packer")
+require("themorgan.lazy")
 
 
