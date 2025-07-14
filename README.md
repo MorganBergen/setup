@@ -42,13 +42,10 @@ Battery: 81%
 │   │   │    
 │   │   └── themorgan
 │   │       ├── init.lua
-│   │       ├── packer.lua
+│   │       ├── lazy.lua
 │   │       └── remap.lua
-│   │  
-│   ├── pack/...
-│   │  
-│   ├── plugin
-│   │   └── packer_compiled.lua
-│   └── README.md
 └── README.md
 
+
+Use [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager. Run `:Lazy sync` after cloning.
+File explorer is provided by [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua). Toggle with <leader>pv.
