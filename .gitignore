@@ -3,3 +3,5 @@
 
 # Packer output
 nvim/plugin/packer_compiled.lua
+
+.env

@@ -1,0 +1,79 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/owner/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = valueh
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+window-padding-x = 20
+window-padding-y = 20
+font-family = "JetBrainsMono Nerd Font"
+font-feature = -calt, -liga, -dlig
+#  theme = dark:tokyonight-storm,light:tokyonight-day
+#  theme = dark:NvimDark,light:NvimLight
+#  theme = dark:matrix,light:xcodelight
+
+#  theme = dark:Github-Dark-Default, light:Github-Light-Defaultl
+
+
+
+palette = 0=#1F2428  # black
+palette = 1=#ff7f8d  # red
+palette = 2=#56d364  # green
+palette = 3=#ffdf5d  # yellow
+palette = 4=#58a6ff  # blue
+palette = 5=#d2a8ff  # purple
+palette = 6=#56d4dd  # cyan
+palette = 7=#d3dbe3  # white
+palette = 8=#33383d  # bright black
+palette = 9=#ffa198  # bright red (baby pink)
+palette = 10=#85e89d # bright green
+palette = 11=#ffea7f # bright yellow
+palette = 12=#79c0ff # bright blue
+palette = 13=#ec6cb9 # bright magenta (pink)
+palette = 14=#83caff # bright cyan
+palette = 15=#dde5ed # bright white
+
+background = #24292E
+foreground = #c9d1d9
+cursor-color = #c9d1d9
+cursor-text = #24292E
+selection-background = #383d42
+selection-foreground = #d3dbe3
