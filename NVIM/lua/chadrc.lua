@@ -7,7 +7,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "github_dark",
+  theme = "ayu_dark",
   transparency = false,
 
 	-- hl_override = {
@@ -20,7 +20,9 @@ M.nvdash = { load_on_startup = true }
 M.ui = {
       tabufline = {
          lazyload = false
-     }
+     },
+    theme = "ayu_dark",
+    changed_themes = {},
 }
 
 return M
